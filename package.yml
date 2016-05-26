@@ -1,0 +1,18 @@
+name       : nuvola-app-logitech-media-server
+version    : 2.0
+release    : 1
+source     :
+    - https://github.com/tiliado/nuvola-app-logitech-media-server/archive/2.0.tar.gz : 8670377d6c703079f690e5000ba9c058e7878dab7f19be4c6c766326b205d407
+license    : BSD-2-Clause
+component  : desktop.multimedia
+summary    : Logitech Media Server Integration for Nuvola Player 3.
+description: |
+    Integration of Logitech Media Server into your linux desktop via Nuvola Player.
+builddeps  :
+    - librsvg-devel
+rundeps    :
+    - nuvolaplayer
+build      : |
+    %make 
+install    : |
+    %make_install DEST="$installdir/usr/share/nuvolaplayer3/web_apps"
